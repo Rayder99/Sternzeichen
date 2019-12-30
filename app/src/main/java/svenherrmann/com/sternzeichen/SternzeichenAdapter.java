@@ -64,13 +64,13 @@ class SternzeichenAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.name = convertView.findViewById((R.id.text1));
             holder.datumsbereich = convertView.findViewById(R.id.text2);
-            holder.icon = convertView.findViewById(R.layout.icon);
+            holder.icon = convertView.findViewById(R.id.icon);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Context context = context = parent.getContext();
+        Context context = parent.getContext();
         Sternzeichen zeichen = (Sternzeichen) getItem(position);
         holder.name.setText(zeichen.getName(context));
         holder.icon.setImageResource(zeichen.getIdForDrawable());
